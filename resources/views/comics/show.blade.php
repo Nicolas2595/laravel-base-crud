@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>{{ $comic->title }}</h1>
+    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Modifica</a>
 
     <div class="row my-4">
         <div class="col-2">
