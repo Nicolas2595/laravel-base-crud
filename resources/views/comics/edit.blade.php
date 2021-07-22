@@ -1,6 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
+
+    @if ($errors->any())   
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach            
+        </ul>
+    </div> 
+    @endif
+
     <h1>Modifica del Comic: {{ $comic->title }}</h1>
     <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Visualizza</a>
 
